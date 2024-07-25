@@ -1,1 +1,1 @@
-# codeby-devops
+# Курс "Основы DevOps" Codeby Academy
