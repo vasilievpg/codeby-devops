@@ -1,0 +1,945 @@
+Script started on 2024-07-27 08:35:57+03:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="128" LINES="48"]
+[?2004hvagrant@codeby:~$ ps -aux
+[?2004lUSER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  1.1 100696 11256 ?        Ss   07:01   0:01 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    07:01   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   07:01   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   07:01   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   07:01   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   07:01   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   07:01   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   07:01   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    07:01   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    07:01   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    07:01   0:00 [ksoftirqd/0]
+root          14  0.0  0.0      0     0 ?        R    07:01   0:00 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    07:01   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    07:01   0:00 [idle_inject/0]
+root          18  0.0  0.0      0     0 ?        S    07:01   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    07:01   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    07:01   0:00 [idle_inject/1]
+root          21  0.0  0.0      0     0 ?        S    07:01   0:00 [migration/1]
+root          22  0.0  0.0      0     0 ?        S    07:01   0:00 [ksoftirqd/1]
+root          24  0.0  0.0      0     0 ?        I<   07:01   0:00 [kworker/1:0H-events_highpri]
+root          25  0.0  0.0      0     0 ?        S    07:01   0:00 [kdevtmpfs]
+root          26  0.0  0.0      0     0 ?        I<   07:01   0:00 [inet_frag_wq]
+root          27  0.0  0.0      0     0 ?        S    07:01   0:00 [kauditd]
+root          28  0.0  0.0      0     0 ?        S    07:01   0:00 [khungtaskd]
+root          29  0.0  0.0      0     0 ?        S    07:01   0:00 [oom_reaper]
+root          30  0.0  0.0      0     0 ?        I<   07:01   0:00 [writeback]
+root          31  0.0  0.0      0     0 ?        S    07:01   0:00 [kcompactd0]
+root          32  0.0  0.0      0     0 ?        SN   07:01   0:00 [ksmd]
+root          33  0.0  0.0      0     0 ?        SN   07:01   0:00 [khugepaged]
+root          80  0.0  0.0      0     0 ?        I<   07:01   0:00 [kintegrityd]
+root          81  0.0  0.0      0     0 ?        I<   07:01   0:00 [kblockd]
+root          82  0.0  0.0      0     0 ?        I<   07:01   0:00 [blkcg_punt_bio]
+root          83  0.0  0.0      0     0 ?        I<   07:01   0:00 [tpm_dev_wq]
+root          84  0.0  0.0      0     0 ?        I<   07:01   0:00 [ata_sff]
+root          85  0.0  0.0      0     0 ?        I<   07:01   0:00 [md]
+root          86  0.0  0.0      0     0 ?        I<   07:01   0:00 [edac-poller]
+root          87  0.0  0.0      0     0 ?        I<   07:01   0:00 [devfreq_wq]
+root          88  0.0  0.0      0     0 ?        S    07:01   0:00 [watchdogd]
+root          90  0.0  0.0      0     0 ?        I<   07:01   0:00 [kworker/1:1H-kblockd]
+root          92  0.0  0.0      0     0 ?        S    07:01   0:00 [kswapd0]
+root          93  0.0  0.0      0     0 ?        S    07:01   0:00 [ecryptfs-kthrea]
+root          95  0.0  0.0      0     0 ?        I<   07:01   0:00 [kthrotld]
+root          96  0.0  0.0      0     0 ?        I<   07:01   0:00 [acpi_thermal_pm]
+root          99  0.0  0.0      0     0 ?        S    07:01   0:00 [scsi_eh_0]
+root         100  0.0  0.0      0     0 ?        I<   07:01   0:00 [scsi_tmf_0]
+root         101  0.0  0.0      0     0 ?        S    07:01   0:00 [scsi_eh_1]
+root         102  0.0  0.0      0     0 ?        I<   07:01   0:00 [scsi_tmf_1]
+root         104  0.0  0.0      0     0 ?        I<   07:01   0:00 [vfio-irqfd-clea]
+root         105  0.0  0.0      0     0 ?        I<   07:01   0:00 [mld]
+root         106  0.0  0.0      0     0 ?        I<   07:01   0:00 [ipv6_addrconf]
+root         115  0.0  0.0      0     0 ?        I<   07:01   0:00 [kstrp]
+root         118  0.0  0.0      0     0 ?        I<   07:01   0:00 [zswap-shrink]
+root         119  0.0  0.0      0     0 ?        I<   07:01   0:00 [kworker/u5:0]
+root         124  0.0  0.0      0     0 ?        I<   07:01   0:00 [charger_manager]
+root         148  0.0  0.0      0     0 ?        I<   07:01   0:00 [kworker/0:1H-kblockd]
+root         160  0.0  0.0      0     0 ?        I<   07:01   0:00 [mpt_poll_0]
+root         161  0.0  0.0      0     0 ?        I<   07:01   0:00 [cryptd]
+root         162  0.0  0.0      0     0 ?        I<   07:01   0:00 [mpt/0]
+root         201  0.0  0.0      0     0 ?        S    07:01   0:00 [scsi_eh_2]
+root         202  0.0  0.0      0     0 ?        I<   07:01   0:00 [scsi_tmf_2]
+root         234  0.0  0.0      0     0 ?        I<   07:01   0:00 [raid5wq]
+root         278  0.0  0.0      0     0 ?        S    07:01   0:00 [jbd2/sda1-8]
+root         279  0.0  0.0      0     0 ?        I<   07:01   0:00 [ext4-rsv-conver]
+root         351  0.0  1.7  48144 16880 ?        S<s  07:01   0:00 /lib/systemd/systemd-journald
+root         387  0.0  0.0      0     0 ?        I<   07:01   0:00 [kaluad]
+root         388  0.0  0.0      0     0 ?        I<   07:01   0:00 [kmpath_rdacd]
+root         389  0.0  0.0      0     0 ?        I<   07:01   0:00 [kmpathd]
+root         390  0.0  0.0      0     0 ?        I<   07:01   0:00 [kmpath_handlerd]
+root         393  0.0  2.7 354884 27100 ?        SLsl 07:01   0:00 /sbin/multipathd -d -s
+root         411  0.0  0.6  23156  6608 ?        Ss   07:01   0:00 /lib/systemd/systemd-udevd
+systemd+     432  0.0  0.6  89356  6516 ?        Ssl  07:01   0:00 /lib/systemd/systemd-timesyncd
+systemd+     575  0.0  0.8  16120  8248 ?        Ss   07:01   0:00 /lib/systemd/systemd-networkd
+systemd+     577  0.0  1.2  25260 12408 ?        Ss   07:01   0:00 /lib/systemd/systemd-resolved
+message+     614  0.0  0.5   8684  4964 ?        Ss   07:01   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile
+root         619  0.0  0.4  82696  4076 ?        Ssl  07:01   0:00 /usr/sbin/irqbalance --foreground
+root         622  0.0  1.8  32996 18780 ?        Ss   07:01   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-t
+syslog       623  0.0  0.5 222400  5412 ?        Ssl  07:01   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         625  0.0  2.8 1320000 28252 ?       Ssl  07:01   0:01 /usr/lib/snapd/snapd
+root         627  0.0  0.7  23704  7860 ?        Ss   07:01   0:00 /lib/systemd/systemd-logind
+root         632  0.0  0.2   7284  2788 ?        Ss   07:01   0:00 /usr/sbin/cron -f -P
+root         640  0.0  0.1   6216  1160 ttyS0    Ss+  07:01   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 
+root         643  0.0  0.4   7836  4732 tty1     Ss   07:01   0:00 /bin/login -p --
+root         668  0.0  2.1 110072 21280 ?        Ssl  07:01   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-up
+root        1550  0.0  0.0      0     0 ?        I    07:27   0:00 [kworker/0:4-cgwb_release]
+vagrant     1793  0.0  0.9  16968  9808 ?        Ss   07:34   0:00 /lib/systemd/systemd --user
+vagrant     1794  0.0  0.3 103624  3708 ?        S    07:34   0:00 (sd-pam)
+root        1882  0.0  0.9  15424  9452 ?        Ss   07:35   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        1883  0.0  0.0      0     0 ?        I    07:35   0:01 [kworker/0:1-events]
+root        1885  0.0  1.0  17168 10856 ?        Ss   07:36   0:00 sshd: vagrant [priv]
+vagrant     1942  0.0  0.8  17300  8032 ?        S    07:36   0:00 sshd: vagrant@pts/0
+vagrant     1943  0.0  0.5   9148  5188 pts/0    Ss+  07:36   0:00 -bash
+root        1990  0.0  0.0      0     0 ?        I    07:40   0:00 [kworker/1:1-events]
+root        2010  0.0  0.0      0     0 ?        I    07:44   0:00 [kworker/1:3-events]
+root        2051  0.0  0.0      0     0 ?        I    08:05   0:00 [kworker/u4:1-events_unbound]
+root        2056  0.0  1.1  17176 10944 ?        Ss   08:06   0:00 sshd: vagrant [priv]
+vagrant     2135  0.0  0.7  17312  7900 ?        S    08:06   0:00 sshd: vagrant@notty
+vagrant     2136  0.0  0.5   7912  5528 ?        Ss   08:06   0:00 /usr/lib/openssh/sftp-server
+vagrant     2137  0.0  0.5   7768  5448 ?        Ss   08:06   0:00 /usr/lib/openssh/sftp-server
+root        2250  0.0  0.0      0     0 ?        R    08:23   0:00 [kworker/u4:0-events_unbound]
+root        2275  0.0  0.0      0     0 ?        I    08:30   0:00 [kworker/u4:3-flush-8:0]
+vagrant     2349  0.0  0.5   9184  5280 tty1     S    08:34   0:00 -bash
+root        2368  0.3  0.0      0     0 ?        I    08:35   0:00 [kworker/0:0-events]
+vagrant     2373  0.0  0.1   6204  1068 tty1     S+   08:35   0:00 script ps-log.txt
+vagrant     2374  0.5  0.5   9068  5092 pts/1    Ss   08:35   0:00 bash -i
+vagrant     2383  0.0  0.3  10728  3552 pts/1    R+   08:36   0:00 ps -aux
+[?2004hvagrant@codeby:~$ ps -u$[K $user[K[K[K[KUSER
+[?2004l    PID TTY          TIME CMD
+   1793 ?        00:00:00 systemd
+   1794 ?        00:00:00 (sd-pam)
+   1942 ?        00:00:00 sshd
+   1943 pts/0    00:00:00 bash
+   2135 ?        00:00:00 sshd
+   2136 ?        00:00:00 sftp-server
+   2137 ?        00:00:00 sftp-server
+   2349 tty1     00:00:00 bash
+   2373 tty1     00:00:00 script
+   2374 pts/1    00:00:00 bash
+   2387 pts/1    00:00:00 ps
+[?2004hvagrant@codeby:~$ top
+[?2004l[?25l[?1c[H[J[mtop - 08:36:32 up  1:35,  2 users,  load average: 0.01, 0.02, 0.00[m[39;49m[m[39;49m[K
+Tasks:[m[39;49m[1m 106 [m[39;49mtotal,[m[39;49m[1m   1 [m[39;49mrunning,[m[39;49m[1m 105 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m100.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+MiB Mem :[m[39;49m[1m    969.3 [m[39;49mtotal,[m[39;49m[1m    510.5 [m[39;49mfree,[m[39;49m[1m    181.2 [m[39;49mused,[m[39;49m[1m    277.6 [m[39;49mbuff/cache[m[39;49m[m[39;49m[K
+MiB Swap:[m[39;49m[1m      0.0 [m[39;49mtotal,[m[39;49m[1m      0.0 [m[39;49mfree,[m[39;49m[1m      0.0 [m[39;49mused.[m[39;49m[1m    640.2 [m[39;49mavail Mem [m[39;49m[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                  [m[39;49m[K
+[m[1m   2388 vagrant   20   0   10916   3772   3164 R   4.2   0.4   0:00.15 top                                                      [m[39;49m[K
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.09 rcu_sched                                                [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K
+[m     87 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq                                               [m[39;49m[K
+[m     88 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                [m[39;49m[K
+[m     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/1:1H-kblockd                                     [m[39;49m[K
+[m     92 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                  [m[39;49m[K[49;1H[?25h[?0c
+[1]+  Stopped                 top
+[?2004hvagrant@codeby:~$ bg
+[?2004l[1]+ top &
+[?2004hvagrant@codeby:~$ [49;1H[?25h[?0c
+
+[?2004l
+[1]+  Stopped                 top
+[?2004hvagrant@codeby:~$ 
+[?2004l[?2004hvagrant@codeby:~$ fg 1
+[?2004ltop
+[?25l[?1c[?25l[?1c[H[mtop - 08:38:53 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+Tasks:[m[39;49m[1m 106 [m[39;49mtotal,[m[39;49m[1m   3 [m[39;49mrunning,[m[39;49m[1m 103 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m 99.9 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+MiB Mem :[m[39;49m[1m    969.3 [m[39;49mtotal,[m[39;49m[1m    510.3 [m[39;49mfree,[m[39;49m[1m    181.4 [m[39;49mused,[m[39;49m[1m    277.6 [m[39;49mbuff/cache[m[39;49m[m[39;49m[K
+MiB Swap:[m[39;49m[1m      0.0 [m[39;49mtotal,[m[39;49m[1m      0.0 [m[39;49mfree,[m[39;49m[1m      0.0 [m[39;49mused.[m[39;49m[1m    640.0 [m[39;49mavail Mem [m[39;49m[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                  [m[39;49m[K
+[m   2368 root      20   0       0      0      0 I   0.1   0.0   0:00.53 kworker/0:0-events                                       [m[39;49m[K
+[m[1m   1990 root      20   0       0      0      0 R   0.1   0.0   0:00.51 kworker/1:1-events                                       [m[39;49m[K
+[m    411 root      20   0   23156   6608   4708 S   0.0   0.7   0:00.28 systemd-udevd                                            [m[39;49m[K
+[m[1m     14 root      20   0       0      0      0 R   0.0   0.0   0:00.10 rcu_sched                                                [m[39;49m[K
+[m    393 root      rt   0  354884  27100   9072 S   0.0   2.7   0:00.35 multipathd                                               [m[39;49m[K
+[m    625 root      20   0 1320000  28252  19548 S   0.0   2.8   0:01.69 snapd                                                    [m[39;49m[K
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K[H[mtop - 08:38:56 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+Tasks:[m[39;49m[1m 106 [m[39;49mtotal,[m[39;49m[1m   1 [m[39;49mrunning,[m[39;49m[1m 105 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.1 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m 99.7 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.1 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+
+
+[K
+
+[m   2368 root      20   0       0      0      0 I   0.3   0.0   0:00.54 kworker/0:0-events                                       [m[39;49m[K
+[m   2373 vagrant   20   0    6204   1068    980 S   0.3   0.1   0:00.52 script                                                   [m[39;49m[K
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.10 rcu_sched                                                [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K
+[m     87 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq                                               [m[39;49m[K
+[m     88 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                [m[39;49m[K
+[m     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/1:1H-kblockd                                     [m[39;49m[K[H[mtop - 08:38:59 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m 99.8 [m[39;49mid,[m[39;49m[1m  0.2 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+
+
+[K
+
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.10 rcu_sched                                                [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K
+[m     87 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq                                               [m[39;49m[K
+[m     88 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                [m[39;49m[K
+[m     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/1:1H-kblockd                                     [m[39;49m[K
+[m     92 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                  [m[39;49m[K
+[m     93 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ecryptfs-kthrea                                          [m[39;49m[K[H[mtop - 08:39:02 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.2 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m 99.8 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+
+
+[K
+
+[m[1m   2388 vagrant   20   0   10916   3772   3164 R   0.3   0.4   0:00.16 top                                                      [m[39;49m[K
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.10 rcu_sched                                                [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K
+[m     87 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq                                               [m[39;49m[K
+[m     88 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                [m[39;49m[K
+[m     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/1:1H-kblockd                                     [m[39;49m[K
+[m     92 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                  [m[39;49m[K[H[mtop - 08:39:05 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m100.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+
+
+[K
+
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.10 rcu_sched                                                [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K
+[m     87 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq                                               [m[39;49m[K
+[m     88 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                [m[39;49m[K
+[m     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/1:1H-kblockd                                     [m[39;49m[K
+[m     92 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                  [m[39;49m[K
+[m     93 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ecryptfs-kthrea                                          [m[39;49m[K[H[mtop - 08:39:08 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+
+MiB Mem :[m[39;49m[1m    969.3 [m[39;49mtotal,[m[39;49m[1m    510.3 [m[39;49mfree,[m[39;49m[1m    181.3 [m[39;49mused,[m[39;49m[1m    277.6 [m[39;49mbuff/cache[m[39;49m[m[39;49m[K
+MiB Swap:[m[39;49m[1m      0.0 [m[39;49mtotal,[m[39;49m[1m      0.0 [m[39;49mfree,[m[39;49m[1m      0.0 [m[39;49mused.[m[39;49m[1m    640.1 [m[39;49mavail Mem [m[39;49m[m[39;49m[K
+[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 08:39:11 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+
+
+
+[K
+
+[m   2250 root      20   0       0      0      0 I   0.3   0.0   0:00.02 kworker/u4:0-events_power_efficient                      [m[39;49m[K
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.10 rcu_sched                                                [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K
+[m     87 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq                                               [m[39;49m[K
+[m     88 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                [m[39;49m[K
+[m     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/1:1H-kblockd                                     [m[39;49m[K
+[m     92 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                  [m[39;49m[K[H[mtop - 08:39:14 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+
+MiB Mem :[m[39;49m[1m    969.3 [m[39;49mtotal,[m[39;49m[1m    510.3 [m[39;49mfree,[m[39;49m[1m    181.3 [m[39;49mused,[m[39;49m[1m    277.7 [m[39;49mbuff/cache[m[39;49m[m[39;49m[K
+
+[K
+
+[m   1990 root      20   0       0      0      0 I   0.3   0.0   0:00.52 kworker/1:1-events                                       [m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 08:39:17 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+
+
+
+[K
+
+[m   2368 root      20   0       0      0      0 I   0.3   0.0   0:00.55 kworker/0:0-events                                       [m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 08:39:20 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+
+
+
+[K
+
+[m[1m   2388 vagrant   20   0   10916   3772   3164 R   0.3   0.4   0:00.17 top                                                      [m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 08:39:23 up  1:37,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+
+
+
+[K
+
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.10 rcu_sched                                                [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K
+[m     87 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq                                               [m[39;49m[K
+[m     88 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                [m[39;49m[K
+[m     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/1:1H-kblockd                                     [m[39;49m[K
+[m     92 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                  [m[39;49m[K
+[m     93 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ecryptfs-kthrea                                          [m[39;49m[K[H[mtop - 08:39:26 up  1:38,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m 99.8 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.2 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+
+
+[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 08:39:29 up  1:38,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.2 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m 99.8 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+
+
+[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 08:39:32 up  1:38,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m100.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+
+
+[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 08:39:35 up  1:38,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+
+
+
+[K
+
+[m[1m   2388 vagrant   20   0   10916   3772   3164 R   0.3   0.4   0:00.18 top                                                      [m[39;49m[K
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.10 rcu_sched                                                [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K
+[m     87 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq                                               [m[39;49m[K
+[m     88 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                [m[39;49m[K
+[m     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/1:1H-kblockd                                     [m[39;49m[K
+[m     92 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                  [m[39;49m[K[H[mtop - 08:39:38 up  1:38,  2 users,  load average: 0.00, 0.00, 0.00[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m  0.2 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m 99.8 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m[39;49m[K
+
+
+[K
+
+[m      1 root      20   0  100696  11256   8024 S   0.0   1.1   0:01.26 systemd                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                 [m[39;49m[K
+[m      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp                                               [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq                                             [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                    [m[39;49m[K
+[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                              [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                             [m[39;49m[K
+[m     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_rude_                                          [m[39;49m[K
+[m     12 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tasks_trace                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                              [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.10 rcu_sched                                                [m[39;49m[K
+[m     15 root      rt   0       0      0      0 S   0.0   0.0   0:00.01 migration/0                                              [m[39;49m[K
+[m     16 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                            [m[39;49m[K
+[m     18 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                  [m[39;49m[K
+[m     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                  [m[39;49m[K
+[m     20 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                            [m[39;49m[K
+[m     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.20 migration/1                                              [m[39;49m[K
+[m     22 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/1                                              [m[39;49m[K
+[m     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                              [m[39;49m[K
+[m     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 inet_frag_wq                                             [m[39;49m[K
+[m     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                  [m[39;49m[K
+[m     28 root      20   0       0      0      0 S   0.0   0.0   0:00.00 khungtaskd                                               [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                               [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 writeback                                                [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.09 kcompactd0                                               [m[39;49m[K
+[m     32 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                     [m[39;49m[K
+[m     33 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                               [m[39;49m[K
+[m     80 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kintegrityd                                              [m[39;49m[K
+[m     81 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kblockd                                                  [m[39;49m[K
+[m     82 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 blkcg_punt_bio                                           [m[39;49m[K
+[m     83 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 tpm_dev_wq                                               [m[39;49m[K
+[m     84 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 ata_sff                                                  [m[39;49m[K
+[m     85 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 md                                                       [m[39;49m[K
+[m     86 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 edac-poller                                              [m[39;49m[K
+[m     87 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 devfreq_wq                                               [m[39;49m[K
+[m     88 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                [m[39;49m[K
+[m     90 root       0 -20       0      0      0 I   0.0   0.0   0:00.03 kworker/1:1H-kblockd                                     [m[39;49m[K
+[m     92 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kswapd0                                                  [m[39;49m[K
+[m     93 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ecryptfs-kthrea                                          [m[39;49m[K[49;1H[?25h[?0c
+[1]+  Stopped                 top
+[?2004hvagrant@codeby:~$ jobs -l
+[?2004l[1]+  2388 Stopped (signal)        top
+[?2004hvagrant@codeby:~$ sudo kill 2388
+[?2004l[?2004hvagrant@codeby:~$ exit
+[?2004lexit
+There are stopped jobs.
+[?2004hvagrant@codeby:~$ exit
+[?2004lexit
+[49;1H[?25h[?0c[49;1H
+[?25h[?0c[K
+Script done on 2024-07-27 08:44:16+03:00 [COMMAND_EXIT_CODE="1"]
