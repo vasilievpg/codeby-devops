@@ -1,0 +1,25 @@
+Script started on 2024-07-27 09:06:40+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="94" LINES="41"]
+[?2004h]0;vagrant@codeby: ~[01;32mvagrant@codeby[00m:[01;34m~[00m$ [7mjava -version[27mjava -version
+[?2004lopenjdk version "1.8.0_412"
+OpenJDK Runtime Environment (build 1.8.0_412-8u412-ga-1~22.04.1-b08)
+OpenJDK 64-Bit Server VM (build 25.412-b08, mixed mode)
+[?2004h]0;vagrant@codeby: ~[01;32mvagrant@codeby[00m:[01;34m~[00m$ [7msudo update-alternatives --config java[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo update-alternatives --config java
+[?2004lThere are 3 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                            Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      auto mode
+* 1            /usr/lib/jvm/java-8-openjdk-amd64/bin/java       1         manual mode
+  2            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      manual mode
+  3            /usr/local/jdk-17.0.12/bin/java                  2         manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 3
+update-alternatives: using /usr/local/jdk-17.0.12/bin/java to provide /usr/bin/java (java) in manual mode
+[?2004h]0;vagrant@codeby: ~[01;32mvagrant@codeby[00m:[01;34m~[00m$ sudo update-alternatives --config java[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[25Pjava -version
+[?2004ljava version "17.0.12" 2024-07-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.12+8-LTS-286, mixed mode, sharing)
+[?2004h]0;vagrant@codeby: ~[01;32mvagrant@codeby[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2024-07-27 09:07:39+03:00 [COMMAND_EXIT_CODE="0"]
