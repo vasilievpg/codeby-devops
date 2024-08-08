@@ -1,0 +1,9 @@
+[all]
+server ansible_host=192.168.56.10
+client ansible_host=192.168.56.11
+
+[server]
+server
+
+[client]
+client
