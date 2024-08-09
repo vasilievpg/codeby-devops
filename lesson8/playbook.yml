@@ -1,0 +1,70 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+- hosts: server
+  become: true
+  tasks:
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: present
+    - name: Create a directory for the SSL certificate
+      file:
+        path: /etc/apache2/ssl
+        state: directory
+    - name: Generate a self-signed certificate
+      command: openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/server.key -out /etc/apache2/ssl/server.crt -subj "/C=US/ST=State/L=City/O=Organization/OU=Department/CN=mydomain.local"
+    - name: Configure Apache to use the SSL certificate
+      copy:
+        content: |
+          <VirtualHost *:443>
+              ServerAdmin webmaster@localhost
+              ServerName mydomain.local
+              DocumentRoot /var/www/html
+
+              SSLEngine on
+              SSLCertificateFile /etc/apache2/ssl/server.crt
+              SSLCertificateKeyFile /etc/apache2/ssl/server.key
+
+              <Directory /var/www/html>
+                  Options Indexes FollowSymLinks
+                  AllowOverride All
+                  Require all granted
+              </Directory>
+          </VirtualHost>
+
+          <VirtualHost *:80>
+              ServerAdmin webmaster@localhost
+              ServerName mydomain.local
+              ServerAlias www.mydomain.local
+              Redirect permanent / https://mydomain.local/
+          </VirtualHost>
+        dest: /etc/apache2/sites-available/000-default.conf
+    - name: Enable SSL module in Apache
+      command: a2enmod ssl
+    - name: Restart Apache to apply changes
+      service:
+        name: apache2
+        state: restarted
+    - name: Fetch the server's self-signed certificate to the local controller
+      fetch:
+        src: /etc/apache2/ssl/server.crt
+        dest: /tmp/server.crt
+        flat: yes
+- hosts: client
+  become: true
+  tasks:
+    - name: Add server domain to /etc/hosts
+      lineinfile:
+        path: /etc/hosts
+        line: "192.168.56.10 mydomain.local www.mydomain.local"
+        state: present
+    - name: Copy the server's self-signed certificate to the client
+      copy:
+        src: /tmp/server.crt
+        dest: /usr/local/share/ca-certificates/server.crt
+    - name: Update CA certificates
+      command: update-ca-certificates
