@@ -1,0 +1,10 @@
+---
+- hosts: mysqlserver
+  become: true
+  roles:
+    - role: ../roles/mysql
+
+- hosts: apacheserver
+  become: true
+  roles:
+    - role: ../roles/apache
