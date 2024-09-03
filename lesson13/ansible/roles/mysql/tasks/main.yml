@@ -1,0 +1,15 @@
+- name: Install MySQL on Ubuntu
+  apt:
+    name: mysql-server
+    state: present
+  when: ansible_os_family == "Debian"
+- name: Install MySQL on CentOS
+  yum:
+    name: mariadb-server
+    state: present
+  when: ansible_os_family == "RedHat"
+- name: Start and enable MySQL service
+  service:
+    name: "{{ mysql_service_name }}"
+    state: started
+    enabled: true
