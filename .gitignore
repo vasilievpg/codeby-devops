@@ -1,3 +1,5 @@
 lesson14/key.json
 lesson14/terraform.tfstate.backup
 *.terraform
+*/key.json
+*/vscode/
