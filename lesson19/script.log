@@ -1,0 +1,29 @@
+Script started on 2024-09-14 16:05:51+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="82" LINES="26"]
+                                                                                  ]0;user@fedora: ~/Projects/codeby-devops/lesson19[0m[27m[24m[J[32m┌──([1m[32m[34muser㉿fedora[0m[34m[32m)-[[1m[32m[39m~/Projects/codeby-devops/lesson19[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?2004hkubectl create namespace codeby[31D[36mk[36mu[36mb[36me[36mc[36mt[36ml[39m[24C[?2004l
+namespace/codeby created
+                                                                                  ]0;user@fedora: ~/Projects/codeby-devops/lesson19
+[0m[27m[24m[J[32m┌──([1m[32m[34muser㉿fedora[0m[34m[32m)-[[1m[32m[39m~/Projects/codeby-devops/lesson19[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?2004h   kubectl run nginx --image=nginx --namespace=codeby[50D[36mk[36mu[36mb[36me[36mc[36mt[36ml[39m[11C[32m-[32m-[32mi[32mm[32ma[32mg[32me[32m=[32mn[32mg[32mi[32mn[32mx[39m [32m-[32m-[32mn[32ma[32mm[32me[32ms[32mp[32ma[32mc[32me[32m=[32mc[32mo[32md[32me[32mb[32my[39m[P[50C [51D[P[51C [51D[P[50C [51D[?2004l
+pod/nginx created
+                                                                                  ]0;user@fedora: ~/Projects/codeby-devops/lesson19
+[0m[27m[24m[J[32m┌──([1m[32m[34muser㉿fedora[0m[34m[32m)-[[1m[32m[39m~/Projects/codeby-devops/lesson19[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?2004hkubectl apply -f nginx-imperative.yaml[38D[36mk[36mu[36mb[36me[36mc[36mt[36ml[39m[7C[32m-[32mf[39m [1mn[1mg[1mi[1mn[1mx[1m-[1mi[1mm[1mp[1me[1mr[1ma[1mt[1mi[1mv[1me[1m.[1my[1ma[1mm[1ml[0m[?2004l
+pod/nginx-imperative created
+                                                                                  ]0;user@fedora: ~/Projects/codeby-devops/lesson19
+[0m[27m[24m[J[32m┌──([1m[32m[34muser㉿fedora[0m[34m[32m)-[[1m[32m[39m~/Projects/codeby-devops/lesson19[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?2004hkubectl apply -f nginx-declarative.yaml[39D[36mk[36mu[36mb[36me[36mc[36mt[36ml[39m[7C[32m-[32mf[39m [1mn[1mg[1mi[1mn[1mx[1m-[1md[1me[1mc[1ml[1ma[1mr[1ma[1mt[1mi[1mv[1me[1m.[1my[1ma[1mm[1ml[0m[?2004l
+error: error parsing nginx-declarative.yaml: error converting YAML to JSON: yaml: line 10: found character that cannot start any token
+                                                                                  ]0;user@fedora: ~/Projects/codeby-devops/lesson19
+[0m[27m[24m[J[32m┌──([1m[32m[34muser㉿fedora[0m[34m[32m)-[[1m[32m[39m~/Projects/codeby-devops/lesson19[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?2004hkubectl apply -f nginx-declarative.yaml[39D[36mk[36mu[36mb[36me[36mc[36mt[36ml[39m[7C[32m-[32mf[39m [1mn[1mg[1mi[1mn[1mx[1m-[1md[1me[1mc[1ml[1ma[1mr[1ma[1mt[1mi[1mv[1me[1m.[1my[1ma[1mm[1ml[0m[?2004l
+Error from server (BadRequest): error when creating "nginx-declarative.yaml": Deployment in version "v1" cannot be handled as a Deployment: strict decoding error: unknown field "spec.template.labels"
+                                                                                  ]0;user@fedora: ~/Projects/codeby-devops/lesson19
+[0m[27m[24m[J[32m┌──([1m[32m[34muser㉿fedora[0m[34m[32m)-[[1m[32m[39m~/Projects/codeby-devops/lesson19[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?2004hkubectl apply -f nginx-declarative.yaml[39D[36mk[36mu[36mb[36me[36mc[36mt[36ml[39m[7C[32m-[32mf[39m [1mn[1mg[1mi[1mn[1mx[1m-[1md[1me[1mc[1ml[1ma[1mr[1ma[1mt[1mi[1mv[1me[1m.[1my[1ma[1mm[1ml[0m[?2004l
+deployment.apps/nginx-declarative created
+                                                                                  ]0;user@fedora: ~/Projects/codeby-devops/lesson19
+[0m[27m[24m[J[32m┌──([1m[32m[34muser㉿fedora[0m[34m[32m)-[[1m[32m[39m~/Projects/codeby-devops/lesson19[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?2004he[4m[37me[24m[39m[4m[37me[24m[39m[38;2;153;153;153mxit[39m[4m[37me[4m[37mx[24m[39m[24m[36me[24m[36mx[39m[36me[36mx[36mi[39m[4m[37me[4m[37mx[4m[37mi[24m[39m[4m[37mi[4m[37mt[24m[39m[24m[36me[24m[36mx[24m[36mi[24m[36mt[39m[?2004l
+
+Script done on 2024-09-14 16:18:05+03:00 [COMMAND_EXIT_CODE="0"]
