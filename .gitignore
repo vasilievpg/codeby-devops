@@ -3,3 +3,5 @@ lesson14/terraform.tfstate.backup
 *.terraform
 */key.json
 */vscode/
+*/db_data/
+*/wordpress_data
