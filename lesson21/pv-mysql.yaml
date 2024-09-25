@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mysql-node1
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage       # Класс хранилища
+  capacity:
+    storage: 1Gi                       # Размер хранилища
+  accessModes:
+    - ReadWriteOnce                    # Режим доступа
+  local:
+    path: /home/user/Projects/codeby-devops/lesson21/mysql-data  # Путь на первой ноде
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - fedora            # имя первой ноды
